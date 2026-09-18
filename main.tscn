@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bywj81mfbpfx1"]
 
+[ext_resource type="Texture2D" uid="uid://ebq28xga7xai" path="res://orig_big.png" id="1_7mycd"]
 [ext_resource type="Script" uid="uid://b7dl2css68oxe" path="res://player.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://dn03p1x6sc4g4" path="res://SideView_Grass_tileset.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dlmfw1dk5odtl" path="res://sprites/1.png" id="2_1bvp3"]
@@ -48,11 +49,18 @@ sources/0 = SubResource("TileSetAtlasSource_h2yge")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ajp3a"]
 font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_16gkw"]
 font_size = 73
 
 [node name="Main" type="Node" unique_id=1557914734]
+
+[node name="Backdrop" type="Sprite2D" parent="." unique_id=1347481521]
+z_index = -11
+position = Vector2(2469.0002, 422)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("1_7mycd")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=606844682]
 position = Vector2(-500.525, 60.575)
@@ -80,6 +88,7 @@ tile_set = SubResource("TileSet_ajp3a")
 [node name="Label" type="Label" parent="TileMapLayer" unique_id=2144449397]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 
 [node name="ui" type="CanvasLayer" parent="." unique_id=315998208]
 script = ExtResource("5_lquwl")
@@ -89,6 +98,7 @@ offset_left = 1.0
 offset_top = 62.0
 offset_right = 532.0
 offset_bottom = 155.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Press A and D or arrow keys to move"
 label_settings = SubResource("LabelSettings_ajp3a")
 
@@ -184,6 +194,7 @@ offset_left = 1719.0
 offset_top = 207.0
 offset_right = 2299.0
 offset_bottom = 289.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Collect all hearts and make verity happy"
 
@@ -192,6 +203,7 @@ offset_left = 1029.0
 offset_top = 203.0
 offset_right = 1260.0
 offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Try wall jumping"
 
@@ -200,6 +212,7 @@ offset_left = 654.0
 offset_top = 201.0
 offset_right = 847.0
 offset_bottom = 283.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Space to jump"
 
@@ -208,5 +221,6 @@ offset_left = 46.0
 offset_top = 196.0
 offset_right = 179.0
 offset_bottom = 278.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "W, D to move"
