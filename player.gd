@@ -43,16 +43,16 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor():
 		jumps_left = MAX_JUMPS
-	elif is_on_wall() and not is_on_floor():
-		jumps_left = MAX_JUMPS
+	#elif is_on_wall() and not is_on_floor():
+	#	jumps_left = MAX_JUMPS
 
 	var direction := Input.get_axis("left", "right")
 
-	if is_on_wall() and not is_on_floor() and Input.is_action_just_pressed("jump"):
-		velocity.y = WALL_JUMP_VELOCITY
-		velocity.x = get_wall_normal().x * WALL_JUMP_PUSH
-		jumps_left = MAX_JUMPS - 1
-	elif Input.is_action_just_pressed("jump") and jumps_left > 0:
+	#()if is_on_wall() and not is_on_floor() and Input.is_action_just_pressed("jump"):
+	#	velocity.y = WALL_JUMP_VELOCITY
+	#	velocity.x = get_wall_normal().x * WALL_JUMP_PUSH
+	#	jumps_left = MAX_JUMPS - 1
+	if Input.is_action_just_pressed("jump") and jumps_left > 0:
 		velocity.y = JUMP_VELOCITY
 		jumps_left -= 1
 
